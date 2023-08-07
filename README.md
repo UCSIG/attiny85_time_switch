@@ -29,6 +29,8 @@ The device also monitors the supply voltage and turns off the load if the supply
 There are three jumpers which must be set to either select the 12V or the 24V configuration. This changes the on/off times as well as the undervoltage thresholds.  
 Every time the jumper configuration is changed, a reset must be performed for the changes to take effect.  
 
+Upon coming out of reset, the device reads its clock calibration values stored in the internal eeprom to provide accurate timings for the time switch.
+
 The device wakes up periodically and immediately goes back to sleep. That way, very long deep sleep periods can be reached.  
 The ATtiny85 runs off of the internal 128kHz low speed oscillator during deep sleep. The watchdog timer wakes up the device every 8.192s (the maximum watchdog timeout) and the ATtiny increments a conuter variable.
 If it surpasses a pre-defined threshold, the load switch changes state from on->off or the other way round.  
