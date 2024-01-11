@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!-- Mirrored from jeelabs.org/2013/05/18/zero-power-measurement-part-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2015 23:08:48 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- /Added by HTTrack -->
+<script src="Zero%20Power%20Measurement-Dateien/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app219.us.archive.org';v.server_ms=2199;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/ruffle.js"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/","20221230225158","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1672440718");
+</script>
+<link rel="stylesheet" type="text/css" href="Zero%20Power%20Measurement-Dateien/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="Zero%20Power%20Measurement-Dateien/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title> » Zero-power measurement – part 2 » JeeLabs</title>
+
+<link rel="stylesheet" href="Zero%20Power%20Measurement-Dateien/style.css" type="text/css" media="screen">
+<!--[if gte IE 6]><link rel="stylesheet" href="https://jeelabs.org/wp-content/themes/depo-masthead/ie.css" type="text/css" media="screen" /><![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="JeeLabs RSS Feed" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/feed/index.html">
+<link rel="pingback" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/xmlrpc.php">
+
+<link rel="alternate" type="application/rss+xml" title="JeeLabs » Zero-power measurement – part 2 Comments Feed" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/feed/index.html">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/web.archive.org\/web\/20221230225158\/http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/web.archive.org\/web\/20221230225158\/http:\/\/jeelabs.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),c.toDataURL().length>3e3):("simple"===a?d.fillText(String.fromCharCode(55357,56835),0,0):d.fillText(String.fromCharCode(55356,57135),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/jqueryc1d8.js"></script>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/jquery-migrate.min1576.js"></script>
+<link rel="https://api.w.org/" href="https://jeelabs.org/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/xmlrpc0db0.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Zero-power battery measurement" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/17/zero-powe-battery-measurement/index.html">
+<link rel="next" title="Supply noise sensitivity" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/19/supply-noise-sensitivity/index.html">
+<meta name="generator" content="WordPress 4.4">
+<link rel="canonical" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/index.html">
+<link rel="shortlink" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/indexd6aa.html?p=26234">
+<link rel="alternate" type="application/json+oembed" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fjeelabs.org%2F2013%2F05%2F18%2Fzero-power-measurement-part-2%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fjeelabs.org%2F2013%2F05%2F18%2Fzero-power-measurement-part-2%2F&amp;format=xml">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<script type="text/javascript" charset="utf-8">
+/*<![CDATA[ */
+//set title font size
+jQuery(document).ready(function() {
+	
+	function resize(selector, max) {
+		jQuery(selector).each(function() {
+
+			var width = jQuery(this).width();
+			var height = jQuery(this).height();
+			if(width > max) {
+			var r = ( height / width );
+			var w = max;
+			var h = ( w * r );
+			jQuery(this).height(h).width(w);
+		}});
+	}
+	
+	resize('#home .gallery img', 90);
+	resize('#home .entry img', 300);
+	resize('#home .wp-caption img', 290);
+	resize('#home .wp-caption', 300);
+	jQuery('#home .wp-caption').css('height', 'auto');
+});
+/* ]]> */
+</script>
+</head>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(725,27,25,2,"web","https://jeelabs.org/2013/05/18/zero-power-measurement-part-2/","20221230225158",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt","https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<div id="page">
+
+<h1 class="name"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/index.html" title="Computing stuff tied to the physical world"><span>
+		Computing stuff tied to the physical world</span></a></h1>
+
+<div id="container">
+	<div class="sleeve">
+		
+		<div id="header">
+						<h1 style="font-size: 120px;">
+			<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/index.html" title="Computing stuff tied to the physical world">			<!-- JeeLabs -->
+			<img src="Zero%20Power%20Measurement-Dateien/jl-400x110.png" alt="JeeLabs">
+			</a>			</h1>
+
+			<ul id="menu">
+				<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/intro/index.html">Intro</a><span>|</span></li><li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/cafe/index.html">Docs</a><span>|</span></li><li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/talk/index.html">Forum</a><span>|</span></li><li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/book/index.html">Book</a><span>|</span></li><li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/shop/index.html">Shop</a><span>|</span></li><li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/about/index.html">About</a><span>|</span></li>			<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/index.html">Archives</a><span>|</span>
+			</li>
+			<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/feed/index.html">RSS Feed</a>
+			</li>
+			
+			</ul>
+
+		</div>
+
+		<div id="content" class="group">
+	
+					<div class="post-26234 post type-post status-publish format-standard hentry category-hardware tag-lowpower tag-electronics" id="post-26234">
+						<p class="postmetadata"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/lowpower/index.html" rel="tag">LowPower</a>, <a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/electronics/index.html" rel="tag">Electronics</a><br></p>
+						<h2>Zero-power measurement – part 2</h2>
+						<small>In <a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/hardware/index.html" rel="category tag">Hardware</a> on <strong>May 18, 2013</strong> at <strong>00:01</strong></small>
+
+						<div class="entry">
+							<p>After a great <a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/17/zero-powe-battery-measurement/index.html#comment-8782">suggestion</a> by Max, on yesterday’s post, here’s a another circuit to try:</p>
+
+<p><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-content/uploads/2013/05/JCs-Grid-page-73.png"><img src="Zero%20Power%20Measurement-Dateien/JCs-Grid-page-73.png" alt="JC's Grid, page 73" width="298" height="370" class="aligncenter size-full wp-image-26238"></a></p>
+
+<p>It adds a capacitor and a resistor, but it allows using a P-MOSFET 
+and a divider ratio which can now use the entire ADC range, not just 1 V
+ or so as in yesterday’s circuit. Note however that if VCC is not fixed 
+to the same value under all conditions, then the ADC’s reference voltage
+ can float, and use of the 1.1V bandgap may still be needed.</p>
+
+<p>Here’s the voltage at the <em>top</em> of the divider, showing how it switches on and off:</p>
+
+<p><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-content/uploads/2013/05/SCR24.png"><img src="Zero%20Power%20Measurement-Dateien/SCR24.png" alt="SCR24" width="604" height="456" class="aligncenter size-full wp-image-26235" srcset="Zero%20Power%20Measurement-Dateien/SCR24-300x226.png 300w, Zero%20Power%20Measurement-Dateien/SCR24.png 604w" sizes="(max-width: 604px) 100vw, 604px"></a></p>
+
+<p>That’s with the pull-up resistor value R set to 1 MΩ, which takes 208
+ ms to turn the MOSFET back off. We don’t need that long, a 10 kΩ 
+resistor for R will do fine:</p>
+
+<p><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-content/uploads/2013/05/SCR25.png"><img src="Zero%20Power%20Measurement-Dateien/SCR25.png" alt="SCR25" width="604" height="456" class="aligncenter size-full wp-image-26236" srcset="Zero%20Power%20Measurement-Dateien/SCR25-300x226.png 300w, Zero%20Power%20Measurement-Dateien/SCR25.png 604w" sizes="(max-width: 604px) 100vw, 604px"></a></p>
+
+<p>That still gives us 2 ms to measure the supply level. Note that 
+turn-off is automatic. DIO needs to be turned high again, but that can 
+happen later. In my test code, I left it low for 1s to, then high for 
+7s.</p>
+
+<p>Here’s a neat set of superimposed measurements (using persistence), 
+while varying the high voltage from 3.5 to 12.0 V in 0.5 V steps:</p>
+
+<p><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/wp-content/uploads/2013/05/SCR31.png"><img src="Zero%20Power%20Measurement-Dateien/SCR31.png" alt="SCR31" width="604" height="440" class="aligncenter size-full wp-image-26256" srcset="Zero%20Power%20Measurement-Dateien/SCR31-128x93.png 128w, Zero%20Power%20Measurement-Dateien/SCR31-300x218.png 300w, Zero%20Power%20Measurement-Dateien/SCR31.png 604w" sizes="(max-width: 604px) 100vw, 604px"></a></p>
+
+<p>Warning: for 12V, the divider ratio must be changed so the centre tap stays under VCC.</p>
+
+<p>Note that with higher voltages, the MOSFET will turn off <em>sooner</em>
+ – this is because there is now more current flowing through the pull-up
+ resistor. But still plenty of time left to measure: 1 ms is more than 
+enough for an ADC.</p>
+
+<p><em>Tomorrow, an example of how these measurements can sometimes go awry…</em></p>
+														 
+						</div>
+					</div>
+
+					<div id="showcomments"><a href="#comments">▶ View 2 Comments</a></div>
+
+<div id="comments" style="display: none;">
+
+<script type="text/javascript" charset="utf-8">
+/*<![CDATA[ */
+// comment hide/show mechanism
+	jQuery(document).ready(function() {
+		check_location();			
+		function check_location(trick) {
+			if(trick != 'hide' && window.location.href.indexOf('#comment') > 0) {
+				jQuery('#comments').show('', change_location());
+				jQuery('#showcomments a .closed').css('display', 'none');
+				jQuery('#showcomments a .open').css('display', 'inline');
+				return true;
+			} else {
+				jQuery('#comments').hide('');
+				jQuery('#showcomments a .closed').css('display', 'inline');
+				jQuery('#showcomments a .open').css('display', 'none');
+				return false;
+			}
+		}
+		jQuery('#showcomments a').click(function(){
+			if(jQuery('#comments').css('display') == 'none') {
+				self.location.href = '#comments';
+				check_location();
+			} else {
+				check_location('hide');
+			}
+		});
+		function change_location() {
+			self.location.href = '#comments';
+		}
+	});
+/* ]]> */
+</script>
+
+
+	<ol class="commentlist">
+
+		<li class="comment even thread-even depth-1 parent" id="comment-8788">
+	<div id="div-comment-8788">
+		<div class="comments_text">
+		<p>This is a great solution, but I find it hard to source small-signal
+ MOSFETs locally. Can anyone recommend a suitable P-MOSFET type for this
+ application? Preferably thru-hole i.e. T092 package or similar. SMD is 
+hard to handle on 0.1″ grid proto boards.</p>
+				
+		<div class="reply">
+					</div>
+		</div>
+			
+		<div class="comment-meta commentmetadata">
+			<div class="gravatar"></div>
+			<div class="cite comment-author vcard">
+			<cite class="fn">damonb</cite>
+			<small><a href="#comment-8788" title=""><strong>18 May 2013</strong> at <strong>7am</strong></a> </small>
+			</div>
+		</div>
+	</div>
+<ul class="children">
+	<li class="comment byuser comment-author-jcw bypostauthor odd alt depth-2" id="comment-8791">
+	<div id="div-comment-8791">
+		<div class="comments_text">
+		<p>Probably just about any type P-MOSFET will work here, I expect. 
+Keep an eye on the Vgs parameter, lower is better. Perhaps search for 
+“p-mosfet to92” on Farnell?</p>
+				
+		<div class="reply">
+					</div>
+		</div>
+			
+		<div class="comment-meta commentmetadata">
+			<div class="gravatar"></div>
+			<div class="cite comment-author vcard">
+			<cite class="fn">jcw</cite>
+			<small><a href="#comment-8791" title=""><strong>18 May 2013</strong> at <strong>11am</strong></a> </small>
+			</div>
+		</div>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+	
+	<div class="commentnavigation">
+		<div class="alignleft"></div>
+		<div class="alignright"></div>
+	</div>	
+
+			<p class="nocomments">Comments are closed.</p>
+	
+
+</div>
+					
+					<div class="navigation">
+						<div class="previous">
+								<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/17/zero-powe-battery-measurement/index.html" rel="prev"><span class="arrow">«</span> <span class="link"> <span class="before">Before</span> <span class="title">Zero-power battery measurement</span> <span class="date">May 17, 2013</span> </span></a>						</div>
+						
+						<div class="next">
+								<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/19/supply-noise-sensitivity/index.html" rel="next"><span class="link"> <span class="after">After</span><span class="title">Supply noise sensitivity</span> <span class="date">May 19, 2013</span></span> <span class="arrow">»</span></a>						</div>
+						<div class="clear"></div>
+					</div>
+			</div>
+	</div>
+	<div id="sidebar">
+		<div class="sleeve">
+		<ul class="group">
+			<li id="left_sidebar">
+			<ul>
+					<li id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widgettitle">Recent Posts</h3>		<ul>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/29/turning-the-page-on-2015/index.html">Turning the page on 2015</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/23/tying-up-2015s-loose-ends/index.html">Tying up 2015’s loose ends</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/16/switching-to-a-new-server/index.html">Switching to a new server</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/09/a-diversion-into-fpgas/index.html">A diversion into FPGAs</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/02/a-fingernail-vs-a-moon-lander/index.html">A fingernail vs a moon lander</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/11/25/pi-based-stm32f103-development/index.html">Pi-based STM32F103 development</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/11/18/programmer-pcb-triple-play/index.html">Programmer PCB Triple Play</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/11/11/talking-to-an-stm32/index.html">Talking to an STM32</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/11/04/the-world-of-stm32/index.html">The world of STM32</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/10/28/making-a-sharp-turn/index.html">Making a sharp turn</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/10/21/ide-w-lpc824-part-2/index.html">IDE w/ LPC824, part 2</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/10/14/arduino-ide-w-lpc824/index.html">Arduino IDE w/ LPC824</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/10/07/meet-the-tinker-pico-again/index.html">Meet the Tinker Pico (again)</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/30/getting-back-in-the-groove/index.html">Getting back in the groove</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/23/shedding-weight/index.html">Shedding weight</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/16/bandwagons-and-islands/index.html">Bandwagons and islands</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/09/hundertwasser/index.html">Hundertwasser</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/02/space-tools/index.html">Space tools</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/08/26/clojure-and-clojurescript/index.html">Clojure and ClojureScript</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/08/19/a-feel-for-numbers/index.html">A feel for numbers</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/08/12/lessons-from-history/index.html">Lessons from history</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/08/05/doodling-with-decoders/index.html">Doodling with decoders</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/29/could-a-coin-cell-be-enough/index.html">Could a coin cell be enough?</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/22/forth-on-a-dip/index.html">Forth on a DIP</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/15/rfm69s-ook-and-antennas/index.html">RFM69s, OOK, and antennas</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/08/greasing-the-make-cycle-on-mac/index.html">Greasing the “make” cycle on Mac</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/01/low-power-mode/index.html">Low-power mode :)</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/06/24/ftdi-over-wifi-esp-bridge/index.html">FTDI over WiFi: esp-bridge</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/06/17/moving-up-a-few-levels/index.html">Moving up a (few) level(s)</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/06/10/code-for-the-lpc824/index.html">Code for the LPC8xx</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/06/03/introducing-the-lpc824/index.html">Introducing the LPC824</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/05/27/rfm69-on-atmega/index.html">RFM69 on ATmega</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/05/20/rfm69-on-raspberry-pi/index.html">RFM69 on Raspberry Pi</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/05/13/micro-power-snitch-success/index.html">Micro Power Snitch, success!</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/05/06/micro-power-snitch-part-7/index.html">Micro Power Snitch, part 7</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/29/micro-power-snitch-part-6/index.html">Micro Power Snitch, part 6</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/22/we-interrupt-this-program/index.html">We interrupt this program</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/15/dataflash-via-spi-2/index.html">Dataflash via SPI</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/08/analog-on-the-cheap/index.html">Analog on the cheap</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/01/emulating-eeprom/index.html">Emulating EEPROM</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/03/25/from-lpc810-to-lpc812/index.html">From LPC810 to LPC812</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/03/18/micro-power-snitch-last-part/index.html">Micro Power Snitch, last part</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/03/11/micro-power-snitch-part-4/index.html">Micro Power Snitch, part 4</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/03/04/micro-power-snitch-part-3/index.html">Micro Power Snitch, part 3</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/02/25/micro-power-snitch-part-2/index.html">Micro Power Snitch, part 2</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/02/18/micro-power-snitch/index.html">Micro Power Snitch</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/02/11/uploading-over-serial/index.html">Uploading over serial</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/02/04/bits-pointers-and-interrupts/index.html">Bits, pointers, and interrupts</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/01/28/lpc810-meets-rfm69-part-3/index.html">LPC810 meets RFM69, part 3</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/01/21/volta-makes-the-world-go-round/index.html">Volta makes the world go round</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/01/14/embedded-linux/index.html">Embedded Linux</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/01/07/lpc810-meets-rfm69-part-2/index.html">LPC810 meets RFM69, part 2</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/31/lpc810-meets-rfm69/index.html">LPC810 meets RFM69</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/24/eye-squared-see/index.html">Eye Squared See</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/17/schematics-and-layouts/index.html">Schematics and layouts</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/10/dip-into-the-lpc810/index.html">Dip into the LPC810</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/03/garage-parking-aid/index.html">Garage Parking Aid</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/11/26/getting-started-final-episode/index.html">Getting started, final episode</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/11/19/getting-started-episode-3/index.html">Getting started, episode 3</a>
+						</li>
+					<li>
+				<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/11/13/getting-started-episode-2/index.html">Getting started, episode 2</a>
+						</li>
+				</ul>
+		</li>						
+						</ul>
+			</li>
+			
+			<li id="middle_sidebar">
+			<ul>
+						
+			<li id="depo_archives">
+	<h2>Archives</h2>
+	<ul>
+		<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/12/index.html">December 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/11/index.html">November 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/10/index.html">October 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/09/index.html">September 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/08/index.html">August 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/07/index.html">July 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/06/index.html">June 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/05/index.html">May 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/04/index.html">April 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/03/index.html">March 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/02/index.html">February 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2015/01/index.html">January 2015</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/12/index.html">December 2014</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/11/index.html">November 2014</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2014/10/index.html">October 2014</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/10/index.html">October 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/09/index.html">September 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/07/index.html">July 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/06/index.html">June 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/05/index.html">May 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/04/index.html">April 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/03/index.html">March 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/02/index.html">February 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2013/01/index.html">January 2013</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/12/index.html">December 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/11/index.html">November 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/10/index.html">October 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/09/index.html">September 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/07/index.html">July 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/06/index.html">June 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/05/index.html">May 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/04/index.html">April 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/03/index.html">March 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/02/index.html">February 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2012/01/index.html">January 2012</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/12/index.html">December 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/11/index.html">November 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/10/index.html">October 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/09/index.html">September 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/06/index.html">June 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/05/index.html">May 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/03/index.html">March 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/02/index.html">February 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2011/01/index.html">January 2011</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/12/index.html">December 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/11/index.html">November 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/10/index.html">October 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/09/index.html">September 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/08/index.html">August 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/07/index.html">July 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/06/index.html">June 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/05/index.html">May 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/04/index.html">April 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/03/index.html">March 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/02/index.html">February 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2010/01/index.html">January 2010</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/12/index.html">December 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/11/index.html">November 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/10/index.html">October 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/09/index.html">September 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/08/index.html">August 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/07/index.html">July 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/06/index.html">June 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/05/index.html">May 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/04/index.html">April 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/03/index.html">March 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/02/index.html">February 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2009/01/index.html">January 2009</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2008/12/index.html">December 2008</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2008/11/index.html">November 2008</a></li>
+	<li><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/2008/10/index.html">October 2008</a></li>
+	</ul>
+	
+	<ul>
+			<li class="cat-item cat-item-49"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/arm/index.html">ARM</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/avr/index.html" title="AVR">AVR</a>
+</li>
+	<li class="cat-item cat-item-66"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/book/index.html">Book</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/hardware/index.html" title="Hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/linux/index.html">Linux</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/musings/index.html" title="Musings">Musings</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/category/news/index.html" title="News">News</a>
+</li>
+	</ul>
+	<br class="clear">
+</li>
+			
+						</ul>
+			</li>
+			
+			<li id="right_sidebar">
+			<ul>
+			<li id="text-3" class="widget widget_text"><h3 class="widgettitle">About</h3>			<div class="textwidget">"Jee" stands for JC's Environmental Electronics. This blog is maintained by Jean-Claude Wippler.</div>
+		</li>	<li id="search_widget" class="widget widget_search">
+<form method="get" id="searchform" action="https://web.archive.org/web/20221230225158/https://jeelabs.org/">
+<label class="hidden" for="s">Search for:</label>
+<div><input type="text" name="s" id="s">
+<input type="submit" id="searchsubmit" value="Search">
+</div>
+</form></li><li id="text-4" class="widget widget_text">			<div class="textwidget"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/pub/index-a.html"><b>Alphabetical</b></a> and <a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/pub/index-c.html"><b>Chronological</b></a> index of weblog posts.</div>
+		</li>	<li id="rss_link" class="widget widget_rss"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/feed/index.html">RSS Feed</a></li>
+<li id="ctc-3" class="widget ctc"><h3 class="widgettitle">Tags</h3><div class="ctc"><a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/ac-mains/index.html" class="ctc-tag tag-link-43" title="28 topics" rel="tag" style="font-size: 11.585106383pt;">AC Mains</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/analog/index.html" class="ctc-tag tag-link-47" title="8 topics" rel="tag" style="font-size: 9.67021276596pt;">Analog</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/arduino/index.html" class="ctc-tag tag-link-9" title="27 topics" rel="tag" style="font-size: 11.4893617021pt;">Arduino</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/audio/index.html" class="ctc-tag tag-link-52" title="2 topics" rel="tag" style="font-size: 9.09574468085pt;">Audio</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/cnc/index.html" class="ctc-tag tag-link-20" title="21 topics" rel="tag" style="font-size: 10.914893617pt;">CNC</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/dijn/index.html" class="ctc-tag tag-link-56" title="13 topics" rel="tag" style="font-size: 10.1489361702pt;">DIJN</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/displays/index.html" class="ctc-tag tag-link-21" title="19 topics" rel="tag" style="font-size: 10.7234042553pt;">Displays</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/electronics/index.html" class="ctc-tag tag-link-37" title="67 topics" rel="tag" style="font-size: 15.3191489362pt;">Electronics</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/events/index.html" class="ctc-tag tag-link-63" title="1 topics" rel="tag" style="font-size: 9pt;">Events</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/flashback/index.html" class="ctc-tag tag-link-65" title="8 topics" rel="tag" style="font-size: 9.67021276596pt;">Flashback</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/graphics/index.html" class="ctc-tag tag-link-41" title="4 topics" rel="tag" style="font-size: 9.28723404255pt;">Graphics</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/heating/index.html" class="ctc-tag tag-link-50" title="8 topics" rel="tag" style="font-size: 9.67021276596pt;">Heating</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/home-automation/index.html" class="ctc-tag tag-link-19" title="65 topics" rel="tag" style="font-size: 15.1276595745pt;">Home automation</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/housemon/index.html" class="ctc-tag tag-link-54" title="38 topics" rel="tag" style="font-size: 12.5425531915pt;">HouseMon</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/isp/index.html" class="ctc-tag tag-link-32" title="38 topics" rel="tag" style="font-size: 12.5425531915pt;">ISP</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/javascript/index.html" class="ctc-tag tag-link-53" title="19 topics" rel="tag" style="font-size: 10.7234042553pt;">JavaScript</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeebot/index.html" class="ctc-tag tag-link-10" title="18 topics" rel="tag" style="font-size: 10.6276595745pt;">JeeBot</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeeday/index.html" class="ctc-tag tag-link-58" title="5 topics" rel="tag" style="font-size: 9.3829787234pt;">JeeDay</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeehub/index.html" class="ctc-tag tag-link-11" title="21 topics" rel="tag" style="font-size: 10.914893617pt;">JeeHub</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeelink/index.html" class="ctc-tag tag-link-12" title="39 topics" rel="tag" style="font-size: 12.6382978723pt;">JeeLink</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeemon/index.html" class="ctc-tag tag-link-13" title="64 topics" rel="tag" style="font-size: 15.0319148936pt;">JeeMon</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeerev/index.html" class="ctc-tag tag-link-39" title="4 topics" rel="tag" style="font-size: 9.28723404255pt;">JeeRev</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/jeesmd/index.html" class="ctc-tag tag-link-30" title="5 topics" rel="tag" style="font-size: 9.3829787234pt;">JeeSMD</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/linux/index.html" class="ctc-tag tag-link-68" title="9 topics" rel="tag" style="font-size: 9.76595744681pt;">Linux</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/metering/index.html" class="ctc-tag tag-link-33" title="2 topics" rel="tag" style="font-size: 9.09574468085pt;">Metering</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/musings/index.html" class="ctc-tag tag-link-67" title="22 topics" rel="tag" style="font-size: 11.0106382979pt;">Musings</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/muxshield/index.html" class="ctc-tag tag-link-16" title="5 topics" rel="tag" style="font-size: 9.3829787234pt;">MuxShield</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/network/index.html" class="ctc-tag tag-link-34" title="36 topics" rel="tag" style="font-size: 12.3510638298pt;">Network</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/oscilloscope/index.html" class="ctc-tag tag-link-51" title="10 topics" rel="tag" style="font-size: 9.86170212766pt;">Oscilloscope</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/pof/index.html" class="ctc-tag tag-link-23" title="5 topics" rel="tag" style="font-size: 9.3829787234pt;">POF</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/power/index.html" class="ctc-tag tag-link-40" title="14 topics" rel="tag" style="font-size: 10.2446808511pt;">Power</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/rbbb/index.html" class="ctc-tag tag-link-42" title="1 topics" rel="tag" style="font-size: 9pt;">RBBB</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/reflow/index.html" class="ctc-tag tag-link-28" title="27 topics" rel="tag" style="font-size: 11.4893617021pt;">Reflow</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/rtos/index.html" class="ctc-tag tag-link-62" title="4 topics" rel="tag" style="font-size: 9.28723404255pt;">RTOS</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/sensors/index.html" class="ctc-tag tag-link-18" title="95 topics" rel="tag" style="font-size: 18pt;">Sensors</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/solar/index.html" class="ctc-tag tag-link-46" title="21 topics" rel="tag" style="font-size: 10.914893617pt;">Solar</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/teardown/index.html" class="ctc-tag tag-link-44" title="9 topics" rel="tag" style="font-size: 9.76595744681pt;">Teardown</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/toolkit/index.html" class="ctc-tag tag-link-45" title="13 topics" rel="tag" style="font-size: 10.1489361702pt;">Toolkit</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/what-if/index.html" class="ctc-tag tag-link-60" title="10 topics" rel="tag" style="font-size: 9.86170212766pt;">What-If</a>
+<a href="https://web.archive.org/web/20221230225158/https://jeelabs.org/tag/x10/index.html" class="ctc-tag tag-link-35" title="5 topics" rel="tag" style="font-size: 9.3829787234pt;">X10</a></div></li>
+									</ul>
+			</li>
+
+		</ul>
+		<div class="closer"></div>
+		</div>
+	</div>
+</div>
+	<div id="footer">
+		<p>
+			Theme: <strong>DePo Masthead</strong> by <a href="https://web.archive.org/web/20221230225158/http://powazek.com/" rel="designer">Derek Powazek</a>
+			
+		</p>
+	</div>
+</div>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/comment-reply.mineb11.js"></script>
+<script type="text/javascript" src="Zero%20Power%20Measurement-Dateien/wp-embed.mineb11.js"></script>
+
+
+
+
+
+
+</body><!-- Mirrored from jeelabs.org/2013/05/18/zero-power-measurement-part-2/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 29 Dec 2015 23:08:48 GMT --></html>
+<!--
+     FILE ARCHIVED ON 22:51:58 Dec 30, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:52:52 Jan 11, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 1934.659 (11)
+  exclusion.robots: 0.333
+  exclusion.robots.policy: 0.312
+  cdx.remote: 0.085
+  esindex: 0.02
+  LoadShardBlock: 1863.472 (3)
+  PetaboxLoader3.datanode: 183.477 (4)
+  PetaboxLoader3.resolve: 216.407 (3)
+  load_resource: 244.081
+-->
