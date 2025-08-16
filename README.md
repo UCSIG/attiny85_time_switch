@@ -5,7 +5,7 @@
 The aim of this project is to switch a load on and off in regular time intervals. The device itself consumes only very little sleep current (~19.6uA on average).  
 The device also monitors the supply voltage and turns off the load if the supply drops lower than the defined threshold.
 
-![PCB 3D View](pcb_project/attiny85_time_switch/attiny85_time_switch.png)
+![PCB 3D View](pcb/attiny85_time_switch_rev1/attiny85_time_switch.png)
 
 ## Features
 
