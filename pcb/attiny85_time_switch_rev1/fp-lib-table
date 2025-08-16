@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "attiny85_time_switch")(type "KiCad")(uri "${KIPRJMOD}/attiny85_time_switch.pretty")(options "")(descr ""))
+)
